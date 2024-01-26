@@ -30,12 +30,14 @@ export default function Project({ image, name, description, technologies, url, c
                 <Button className="flex-1" asChild>
                     <a href={url} target="_blank">
                         <Eye className="mr-1.5" />
-                        View</a>
+                        Preview
+                    </a>
                 </Button>
                 <Button className="flex-1" asChild>
                     <a href={code} target="_blank">
                         <Code className="mr-1.5" />
-                        Code</a>
+                        Code
+                    </a>
                 </Button>
             </div>
         </div>
