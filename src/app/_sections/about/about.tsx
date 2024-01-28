@@ -2,7 +2,7 @@ import { Vim } from "@/components/logo";
 import AboutImage from "./about-image";
 
 export default function About() {
-    return <section className="w-full h-[95vh] mt-20" id="about">
+    return <section className="w-full h-[95vh] pt-24" id="about">
         <div className="flex"
         >
             <div className="w-2/4 flex items-start justify-center relative h-[70vh]">

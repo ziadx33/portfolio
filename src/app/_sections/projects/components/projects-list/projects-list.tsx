@@ -1,9 +1,10 @@
-import getProjects from "@/utils/getProjects"
-import { Project as ProjectType } from "@/utils/types"
-import { useEffect, useState, useMemo, Dispatch, SetStateAction } from "react"
+"use client"
+import { useMemo, Dispatch, SetStateAction, useEffect } from "react"
 import Project from "./components/project"
 import SkeletonProjects from "./components/skeleton-projects"
 import { Sorts, TechnologiesList } from "../../projects"
+import { useProjects } from "@/store"
+import getProjects from "@/utils/getProjects"
 
 interface ProjectsListProps {
     technologiesList: TechnologiesList
@@ -13,10 +14,8 @@ interface ProjectsListProps {
 }
 
 export default function ProjectsList({ technologiesList, searchInputValue, settechnologiesList, sorts }: ProjectsListProps) {
-    const [projects, setProjects] = useState<ProjectType[] | null>(null)
-    useEffect(() => {
-        getProjects().then(setProjects)
-    }, [])
+    const { projects, isLoading } = useProjects(store => store)
+    console.log(isLoading)
     const checkedTechnologiesList = useMemo(() => technologiesList.filter(tech => tech.checked), [technologiesList])
     const filteredProjects = projects
         ?.sort((a, b) => {
@@ -46,6 +45,6 @@ export default function ProjectsList({ technologiesList, searchInputValue, sette
             return <Project viewAs={sorts.viewAs} completedInDays={completedInDays} setTechnologiesList={settechnologiesList} key={project.id} {...project} />
         });
     return <div className={`flex ${sorts.viewAs === "list" ? "flex-col" : "flex-wrap"} gap-4 pb-4`}>
-        {filteredProjects || <SkeletonProjects />}
+        {!isLoading ? filteredProjects : <SkeletonProjects />}
     </div>
 }

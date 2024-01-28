@@ -13,3 +13,10 @@ interface Project {
     code: string
     url: string
 }
+
+interface Skill {
+    id: number
+    name: string
+    image: string
+    description: string
+}

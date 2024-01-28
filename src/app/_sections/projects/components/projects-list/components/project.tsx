@@ -22,11 +22,11 @@ export default function Project({ image, name, description, technologies, url, c
             })}
         </div>
     </>
-    return <Card className={`${isList ? "w-full flex pb-0" : "w-96"} h-fit overflow-hidden shadow-xl pb-3`}>
-        <img src={image} alt={name} draggable='false' className={`${isList ? "w-96 h-full" : "w-full h-44"}`} />
+    return <Card className={`${isList ? "w-full flex pb-0" : "w-96 "} h-fit overflow-hidden shadow-xl`}>
+        <img src={image} alt={name} draggable='false' className={isList ? "w-96 border-r" : "w-full h-44"} />
         <div className={`pt-2 px-4 ${isList ? "flex flex-col justify-between" : ""}`}>
             {isList ? <div>{heading}</div> : heading}
-            <div className="flex gap-1 mt-auto">
+            <div className="flex gap-1 mt-auto pb-3">
                 <Button className="flex-1" asChild>
                     <a href={url} target="_blank">
                         <Eye className="mr-1.5" />

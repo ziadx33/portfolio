@@ -9,14 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@google-cloud/local-auth": "^2.1.0",
     "@radix-ui/react-checkbox": "^1.0.4",
     "@radix-ui/react-dropdown-menu": "^2.0.6",
     "@radix-ui/react-hover-card": "^1.0.7",
+    "@radix-ui/react-progress": "^1.0.3",
     "@radix-ui/react-slot": "^1.0.2",
     "@supabase/supabase-js": "^2.39.3",
+    "axios": "^1.6.7",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "date-fns": "^3.3.1",
+    "googleapis": "^105.0.0",
     "lucide-react": "^0.312.0",
     "next": "14.1.0",
     "next-themes": "^0.2.1",
@@ -24,7 +28,9 @@
     "react-dom": "^18",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
-    "usehooks-ts": "^2.9.5"
+    "usehooks-ts": "^2.9.5",
+    "zod": "^3.22.4",
+    "zustand": "^4.5.0"
   },
   "devDependencies": {
     "@types/node": "^20",
