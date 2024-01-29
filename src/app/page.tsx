@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import getProjects from "@/utils/getProjects";
 import LoadingPage from "./loading-page";
 import getSkills from "@/utils/getSkills";
+import { Footer } from "./_components/footer";
 
 export default function Page() {
     const { isLoading: isProjectsLoading, setProjects } = useProjects(store => store)
@@ -24,11 +25,13 @@ export default function Page() {
         })()
     }, [setProjects, setSkills, setIsWait])
     return <>
-        {(isProjectsLoading || isSkillsLoading || isWait) && <LoadingPage loadings={[{ name: "projects", status: isProjectsLoading }, { name: "skills", status: isSkillsLoading }]} />}
+        {/*         {(isProjectsLoading || isSkillsLoading || isWait) && <LoadingPage loadings={[{ name: "projects", status: isProjectsLoading }, { name: "skills", status: isSkillsLoading }]} />} */}
         <Header />
         <Hero />
+        {/*
         <About />
         <Projects />
         <Contact />
+        <Footer /> */}
     </>
 }

@@ -28,7 +28,7 @@ export default function Contact() {
             <Input placeholder="Your name" type="text" name="name" />
             <Input placeholder="Your Email" type="email" name="email" />
             <Input placeholder="Subject" type="string" name="subject" />
-            <Textarea placeholder="How can I help?" name="body" className="h-36" />
+            <Textarea placeholder="How can I help?" name="body" className="min-h-36 max-h-72" />
             <div className="flex gap-1">
                 <Button disabled={isSending} type="submit" className="w-[33rem]" >{!isSuccess ? !isError ? !isSending ? "Let's get in touch" : "Sending..." : "error! try again" : "Thank you, email sent!"} </Button>
                 <SocialLinks />
