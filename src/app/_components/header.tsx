@@ -1,10 +1,9 @@
 "use client"
-import "./header.css"
 import Logo from "@/components/logo";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 import { Menu, X } from "lucide-react";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 export function Header() {
     const [listOpen, setListOpen] = useState(false)

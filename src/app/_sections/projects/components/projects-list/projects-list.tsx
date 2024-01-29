@@ -4,7 +4,6 @@ import Project from "./components/project"
 import SkeletonProjects from "./components/skeleton-projects"
 import { Sorts, TechnologiesList } from "../../projects"
 import { useProjects } from "@/store"
-import getProjects from "@/utils/getProjects"
 
 interface ProjectsListProps {
     technologiesList: TechnologiesList
@@ -15,7 +14,6 @@ interface ProjectsListProps {
 
 export default function ProjectsList({ technologiesList, searchInputValue, settechnologiesList, sorts }: ProjectsListProps) {
     const { projects, isLoading } = useProjects(store => store)
-    console.log(isLoading)
     const checkedTechnologiesList = useMemo(() => technologiesList.filter(tech => tech.checked), [technologiesList])
     const filteredProjects = projects
         ?.sort((a, b) => {

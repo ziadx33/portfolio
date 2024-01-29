@@ -28,10 +28,9 @@ export default function Page() {
         {/*         {(isProjectsLoading || isSkillsLoading || isWait) && <LoadingPage loadings={[{ name: "projects", status: isProjectsLoading }, { name: "skills", status: isSkillsLoading }]} />} */}
         <Header />
         <Hero />
-        {/*
         <About />
         <Projects />
         <Contact />
-        <Footer /> */}
+        <Footer />
     </>
 }
