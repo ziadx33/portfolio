@@ -10,7 +10,7 @@ export function Header() {
     const toggleList = () => {
         if (window.matchMedia("(max-width: 768px)").matches) {
             setListOpen(c => !c)
-            document.body.style.overflow = "auto"
+            document.body.style.overflow = listOpen ? "auto" : "hidden"
         }
     }
     return <header className="w-full md:h-[90px] h-[85px] py-[24px] md:px-[90px] px-[24px]  flex items-center justify-between border-b-2">
