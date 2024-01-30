@@ -15,7 +15,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className="scroll-smooth">
+        <html lang="en" className="scroll-smooth scroll-p-8">
             <body className={`${sora.className} dark:bg-slate-950 dark:text-white`}>
                 <ThemeProvider
                     attribute="class"

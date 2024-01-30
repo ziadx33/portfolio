@@ -18,7 +18,7 @@ export default function Projects() {
     }));
     const [searchInputValue, setSearchInputValue] = useState("")
     const [sorts, setSorts] = useState<Sorts>({ sortBy: "newer", viewAs: "gallery" })
-    return <section className="w-full h-[95vh]" id="projects">
+    return <section className="w-full min-h-[95vh] pb-4" id="projects">
         <h1 className="text-6xl font-bold w-fit mx-auto mt-24 mb-14">Projects</h1>
         <div className="flex flex-col gap-6 w-[90%] mx-auto">
             <SearchForm technologiesList={technologiesList} setSorts={setSorts} setTechnologiesList={setTechnologiesList} searchInputValue={searchInputValue} setSearchInputValue={setSearchInputValue} />

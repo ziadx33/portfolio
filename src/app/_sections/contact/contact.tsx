@@ -23,18 +23,18 @@ export default function Contact() {
         setSucces(res.status === 200)
         setIsSending(false)
     }
-    return <section className="w-full h-[60vh] mt-20 px-12 flex" id="contact">
-        <form onSubmit={contactFormSubmit} className="w-2/4 h-full flex flex-col gap-4 items-center p-6">
+    return <section className="w-full min-h-[60vh] pb-6 mt-20 px-12 flex lg:flex-row flex-col-reverse" id="contact">
+        <form onSubmit={contactFormSubmit} className="lg:w-2/4 w-full h-full flex flex-col gap-4 items-center p-6">
             <Input placeholder="Your name" type="text" name="name" />
             <Input placeholder="Your Email" type="email" name="email" />
             <Input placeholder="Subject" type="string" name="subject" />
             <Textarea placeholder="How can I help?" name="body" className="min-h-36 max-h-72" />
-            <div className="flex gap-1">
+            <div className="flex gap-1 w-full">
                 <Button disabled={isSending} type="submit" className="w-[33rem]" >{!isSuccess ? !isError ? !isSending ? "Let's get in touch" : "Sending..." : "error! try again" : "Thank you, email sent!"} </Button>
                 <SocialLinks />
             </div>
         </form>
-        <div className="w-4/5 h-full flex flex-col justify-start items-start p-4">
+        <div className="lg:w-2/4 w-full h-full flex flex-col justify-start items-start p-4">
             <h1 className="text-6xl font-bold mb-6">Let&apos;s work together!</h1>
             <p className="text-gray-500 w-[70%]">I seek to push the limits of creativity to create high-engaging, user-friendly, and memorable interactive experiences.</p>
             <ul className="text-xl mt-12">

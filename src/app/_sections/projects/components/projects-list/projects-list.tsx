@@ -42,7 +42,7 @@ export default function ProjectsList({ technologiesList, searchInputValue, sette
             const completedInDays = Math.round((completedDate.getTime() - createdDate.getTime()) / (1000 * 60 * 60 * 24));
             return <Project viewAs={sorts.viewAs} completedInDays={completedInDays} setTechnologiesList={settechnologiesList} key={project.id} {...project} />
         });
-    return <div className={`flex ${sorts.viewAs === "list" ? "flex-col" : "flex-wrap"} gap-4 pb-4`}>
+    return <div className={`flex ${sorts.viewAs === "list" ? "flex-col" : "flex-wrap"} gap-4 pb-4 lg:justify-start justify-center`}>
         {!isLoading ? filteredProjects : <SkeletonProjects />}
     </div>
 }

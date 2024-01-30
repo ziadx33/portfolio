@@ -2,9 +2,9 @@ import SocialLinks from "@/components/social-links";
 import Image from "next/image";
 
 export default function Hero() {
-    return <section className="w-full h-[80vh] flex items-center" id="hero">
-        <div className="container h-[80vh] mx-auto flex items-start mt-28 gap-12">
-            <div className="text flex flex-col h-[50%] mt-12 lg:w-2/3 w-full">
+    return <section className="w-full h-screen flex items-center" id="hero">
+        <div className="container h-[70vh] mb-auto mx-auto flex items-start mt-28 gap-12">
+            <div className="text flex items-start flex-col h-[50%] mt-12 lg:w-2/3 w-full">
                 <h1 className="title leading-tight lg:text-6xl lg:mx-0 mx-auto w-fit lg:text-start text-center text-4xl mb-6 dark:text-gray-200">
                     Hi, I&apos;m <span className="font-bold">TheGreatagen.</span>
                     <br />
@@ -17,7 +17,7 @@ export default function Hero() {
                     <SocialLinks />
                 </div>
             </div>
-            <div className="img-container w-1/2 h-[50%] mt-12 justify-center items-start lg:flex hidden">
+            <div className="img-container w-1/2 h-[50%] justify-center items-start lg:flex hidden">
                 <Image draggable="false" width={500} height={500} src="/vim.svg" alt="vim" />
             </div>
         </div>
