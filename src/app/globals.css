@@ -68,10 +68,26 @@
 
 @layer base {
     * {
-        @apply box-border;
+        @apply border-border select-none;
     }
 
     body {
-        @apply min-h-[100vh] bg-background text-foreground;
+        @apply bg-background text-foreground;
+    }
+
+    ::-webkit-scrollbar {
+        @apply w-2
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply rounded-lg
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply bg-vim transition rounded-lg;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        @apply bg-vim/80;
     }
 }
