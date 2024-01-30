@@ -31,6 +31,6 @@ export default function Page() {
         <About />
         <Projects />
         <Contact />
-        <Footer />
+        <Footer /> 
     </>
 }
