@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 import Discord from "./discord";
 
 export default function SocialLinks() {
-    return <div className="social-links flex gap-1">
+    return <div className="social-links w-fit flex gap-1">
         <Button className="w-10 p-0" title="github" asChild>
             <a target="_blank" href="https://github.com/TheGreatagen1"><Github className="w-6" /></a>
         </Button>

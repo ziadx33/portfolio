@@ -23,14 +23,14 @@ export default function Contact() {
         setSucces(res.status === 200)
         setIsSending(false)
     }
-    return <section className="w-full min-h-[60vh] pb-6 mt-20 px-12 flex lg:flex-row flex-col-reverse" id="contact">
+    return <section className="w-full min-h-[60vh] pb-6 mt-20 px-6 md:px-12 flex lg:flex-row flex-col-reverse" id="contact">
         <form onSubmit={contactFormSubmit} className="lg:w-2/4 w-full h-full flex flex-col gap-4 items-center p-6">
             <Input placeholder="Your name" type="text" name="name" />
             <Input placeholder="Your Email" type="email" name="email" />
             <Input placeholder="Subject" type="string" name="subject" />
             <Textarea placeholder="How can I help?" name="body" className="min-h-36 max-h-72" />
-            <div className="flex gap-1 w-full">
-                <Button disabled={isSending} type="submit" className="w-[33rem]" >{!isSuccess ? !isError ? !isSending ? "Let's get in touch" : "Sending..." : "error! try again" : "Thank you, email sent!"} </Button>
+            <div className="flex gap-1 w-full md:flex-row flex-col items-center">
+                <Button disabled={isSending} type="submit" className="w-full" >{!isSuccess ? !isError ? !isSending ? "Let's get in touch" : "Sending..." : "error! try again" : "Thank you, email sent!"} </Button>
                 <SocialLinks />
             </div>
         </form>

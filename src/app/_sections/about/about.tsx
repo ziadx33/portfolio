@@ -2,7 +2,7 @@ import { Vim } from "@/components/logo";
 import AboutImage from "./about-image";
 
 export default function About() {
-    return <section className="w-full min-h-screen flex px-12 xl:py-14 py-8" id="about">
+    return <section className="w-full min-h-screen flex px-6 md:px-12 xl:py-14 py-8" id="about">
         <div className="flex-1 hidden xl:flex justify-center relative">
             <div className="img-container w-fit h-fit relative">
                 <img src="/vim.svg" className="absolute w-20 left-10 top-56" draggable="false" />
