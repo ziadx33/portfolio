@@ -2,8 +2,8 @@
 import { useTheme } from "next-themes"
 
 export default function AboutImage() {
-    const { theme } = useTheme()
-    const isDark = theme === "dark" || theme === "system" ? window.matchMedia("(prefers-color-scheme: dark)").matches : false
+    const { theme, systemTheme } = useTheme()
+    const isDark = theme === "dark" ? true : theme === "system" ? systemTheme === "dark" : false
     return <>
         <svg width="530" height="572" viewBox="0 0 530 572" stroke={isDark ? "white" : "none"} fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M515.447 0H14C7.37258 0 2 5.37261 2 12V513.447C2 520.074 7.37261 525.447 14 525.447H515.447C522.074 525.447 527.447 520.074 527.447 513.447V12C527.447 5.37258 522.074 0 515.447 0Z" stroke="black" strokeWidth="4" strokeMiterlimit="10" />

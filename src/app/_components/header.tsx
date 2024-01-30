@@ -24,16 +24,16 @@ export function Header() {
             </Button>
             <ul className={`items-center gap-4 font-semibold md:flex transition hidden [&.open]:flex [&.open]:bg-white [&.open]:dark:bg-slate-950 [&.open]:fixed [&.open]:z-50 [&.open]:left-0 [&.open]:top-[85px] [&.open]:w-full [&.open]:h-[calc(100vh-85px)] [&.open]:justify-center [&.open]:flex-col ${listOpen ? "open" : ""}`}>
                 <li onClick={toggleList}>
-                    <a className="transition hover:text-gray-600 dark:hover:text-slate-100 md:w-fit w-full md:h-fit h-24" href="#about">About me</a>
+                    <a className="transition hover:dark:text-slate-200 hover:text-gray-600 dark:hover:text-slate-100 md:w-fit w-full md:h-fit h-24" href="#about">About me</a>
                 </li>
                 <li onClick={toggleList}>
-                    <a className="transition hover:text-gray-600 dark:hover:text-slate-100 md:w-fit w-full md:h-fit h-24" href="#skills">Skills</a>
+                    <a className="transition hover:dark:text-slate-200 hover:text-gray-600 dark:hover:text-slate-100 md:w-fit w-full md:h-fit h-24" href="#skills">Skills</a>
                 </li>
                 <li onClick={toggleList}>
-                    <a className="transition hover:text-gray-600 dark:hover:text-slate-100 md:w-fit w-full md:h-fit h-24" href="#projects">Projects</a>
+                    <a className="transition hover:dark:text-slate-200 hover:text-gray-600 dark:hover:text-slate-100 md:w-fit w-full md:h-fit h-24" href="#projects">Projects</a>
                 </li>
                 <li onClick={toggleList}>
-                    <a className="transition hover:text-gray-600 dark:hover:text-slate-100 md:w-fit w-full md:h-fit h-24" href="#contact">Contact me</a>
+                    <a className="transition hover:dark:text-slate-200 hover:text-gray-600 dark:hover:text-slate-100 md:w-fit w-full md:h-fit h-24" href="#contact">Contact me</a>
                 </li>
             </ul>
         </nav>
