@@ -7,7 +7,7 @@ import Hero from "./_sections/hero/hero";
 import Projects from "./_sections/projects/projects";
 import { useEffect, useState } from "react";
 import getProjects from "@/utils/getProjects";
-import LoadingPage from "./loading-page";
+            import LoadingPage from "./loading-page";
 import getSkills from "@/utils/getSkills";
 import { Footer } from "./_components/footer";
 
@@ -31,6 +31,6 @@ export default function Page() {
         <About />
         <Projects />
         <Contact />
-        <Footer /> 
+        <Footer />
     </>
 }
