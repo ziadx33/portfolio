@@ -2,8 +2,8 @@ import SocialLinks from "@/components/social-links";
 import Image from "next/image";
 
 export default function Hero() {
-    return <section className="w-full md:h-screen h-[80vh] flex items-center" id="hero">
-        <div className="container md:h-[70vh] h-full mb-auto mx-auto flex items-start mt-28 gap-12">
+    return <section className="w-full md:h-screen h-screen flex items-center" id="hero">
+        <div className="container h-full mx-auto flex items-start mt-28 gap-12">
             <div className="text flex items-start flex-col h-[50%] mt-12 lg:w-2/3 w-full">
                 <h1 className="title leading-tight lg:text-6xl lg:mx-0 mx-auto w-fit lg:text-start text-center text-4xl mb-6 dark:text-gray-200">
                     Hi, I&apos;m <span className="font-bold">TheGreatagen.</span>

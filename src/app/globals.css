@@ -76,18 +76,6 @@
     }
 
     ::-webkit-scrollbar {
-        @apply w-2
-    }
-
-    ::-webkit-scrollbar-track {
-        @apply rounded-lg
-    }
-
-    ::-webkit-scrollbar-thumb {
-        @apply bg-vim transition rounded-lg;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-        @apply bg-vim/80;
+        @apply hidden
     }
 }

@@ -21,13 +21,7 @@ interface UseSkillsInterface {
     isLoading: boolean
 }
 
-const useSkills = create<UseSkillsInterface>((set) => ({
-    skills: [],
-    setSkills: (skills) => set((state) => ({ ...state, skills, isLoading: false })),
-    isLoading: true
-}))
 
 export {
     useProjects,
-    useSkills
 }
