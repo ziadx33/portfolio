@@ -3,13 +3,16 @@ import { Vim } from "@/components/logo";
 import { Progress } from "@/components/ui/progress";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap"
+import { useEffect } from "react";
 
 type LoadingPageInterface = { loadings: { name: string; status: boolean }[] };
 
 export default function LoadingPage({ loadings }: LoadingPageInterface) {
     const totalTasks = loadings.length;
-    document.body.style.overflow = "hidden"
-    window.scrollTo(0, 0)
+    useEffect(() => {
+        document.body.style.overflow = "hidden"
+        window.scrollTo(0, 0)
+    }, [])
 
     const overallProgress =
         totalTasks > 0
