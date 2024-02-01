@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Sora } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { ReactNode } from "react";
 
-const sora = Sora({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
     title: "TheGreatagen",
@@ -12,11 +13,11 @@ export const metadata: Metadata = {
 export default function RootLayout({
     children,
 }: Readonly<{
-    children: React.ReactNode;
+    children: ReactNode;
 }>) {
     return (
         <html lang="en" className="scroll-smooth scroll-p-8">
-            <body className={`${sora.className} dark:bg-slate-950 dark:text-white`}>
+            <body className={`${inter.className} dark:bg-slate-950 dark:text-white`}>
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="light"

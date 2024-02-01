@@ -1,4 +1,4 @@
-import { Github, MessageCircle, Twitter } from "lucide-react";
+import {Github, Twitter} from "lucide-react"
 import { Button } from "./ui/button";
 import Discord from "./discord";
 

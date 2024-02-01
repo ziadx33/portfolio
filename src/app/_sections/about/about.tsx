@@ -1,14 +1,15 @@
 import { Vim } from "@/components/logo";
 import AboutImage from "./about-image";
+import Image from "next/image";
 
 export default function About() {
     return <section className="w-full min-h-screen flex px-6 md:px-12 xl:py-14 py-8" id="about">
         <div className="flex-1 hidden xl:flex justify-center relative">
             <div className="img-container w-fit h-fit relative">
-                <img src="/vim.svg" className="absolute w-20 left-10 top-56" draggable="false" />
-                <img src="/logos/next.js.png" className="absolute w-20 left-10 top-20" draggable="false" />
-                <img src="/logos/typescript.png" className="absolute w-20 right-10 top-20" draggable="false" />
-                <img src="/logos/tailwind-css.png" className="absolute w-20 right-10 top-56" draggable="false" />
+                <Image alt="vim" src="/vim.svg" className="absolute left-10 top-56" width={70} height={70} draggable="false" />
+                <Image alt="next-js" src="/logos/next.js.png" className="absolute left-10 top-20" width={70} height={70} draggable="false" />
+                <Image alt="typescript" src="/logos/typescript.png" className="absolute right-10 top-20" width={70} height={70} draggable="false" />
+                <Image alt="tailwind-css" src="/logos/tailwind-css.png" className="absolute right-10 top-56" width={70} height={70} draggable="false" />
                 <AboutImage />
             </div>
         </div>

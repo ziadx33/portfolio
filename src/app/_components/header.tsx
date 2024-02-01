@@ -13,7 +13,7 @@ export function Header() {
             document.body.style.overflow = listOpen ? "auto" : "hidden"
         }
     }
-    return <header className="w-full md:h-[90px] h-[85px] py-[24px] md:px-[90px] px-[24px]  flex items-center justify-between border-b-2">
+    return <header id="hero" className="w-full md:h-[90px] h-[85px] py-[24px] md:px-[90px] px-[24px]  flex items-center justify-between border-b-2">
         <div className="flex gap-[0.7rem]">
             <Logo />
             <ModeToggle />

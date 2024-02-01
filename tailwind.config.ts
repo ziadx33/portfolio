@@ -55,6 +55,7 @@ const config = {
                 vim: "#008B29"
             },
             borderRadius: {
+                half: "50%",
                 lg: "var(--radius)",
                 md: "calc(var(--radius) - 2px)",
                 sm: "calc(var(--radius) - 4px)",
@@ -74,6 +75,10 @@ const config = {
                 "accordion-up": "accordion-up 0.2s ease-out",
             },
         },
+        boxShadow: {
+            "red-neon": "0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 0, 0.8)",
+            "green-neon": "0 0 10px rgba(0, 255, 0, 0.8), 0 0 20px rgba(0, 255, 0, 0.8), 0 0 30px rgba(0, 255, 0, 0.8)"
+        }
     },
     plugins: [require("tailwindcss-animate")],
 } satisfies Config

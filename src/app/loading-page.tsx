@@ -12,7 +12,6 @@ export default function LoadingPage({ loadings }: LoadingPageInterface) {
     const loadingContainer = useRef<HTMLDivElement>(null)
     useEffect(() => {
         document.body.style.overflow = "hidden"
-        window.scrollTo(0, 0)
     }, [])
 
     const overallProgress =
@@ -29,6 +28,7 @@ export default function LoadingPage({ loadings }: LoadingPageInterface) {
                 y: loadingContainer.current?.clientHeight - 650,
             })
             if (overallProgress === 100) {
+                window.scrollTo(0, 0)
                 await new Promise((resolve) => setTimeout(resolve, 700))
                 const swipeDuration = 0.8
                 gsap.to(".loading-container", {
@@ -36,7 +36,7 @@ export default function LoadingPage({ loadings }: LoadingPageInterface) {
                     borderBottomRightRadius: (loadingContainer.current.clientHeight / 2),
                     y: -window.innerHeight,
                     duration: swipeDuration,
-                    ease: "power1.inOut",
+                    ease: "power2.inOut",
                     onComplete() {
                         document.body.style.overflow = "auto"
                         document.querySelector(".loading-container")?.remove()
@@ -45,7 +45,7 @@ export default function LoadingPage({ loadings }: LoadingPageInterface) {
                 gsap.to("body :is(section, header)", {
                     y: 0,
                     duration: swipeDuration,
-                    ease: "power1.inOut",
+                    ease: "power2.inOut",
                 })
             }
         }
