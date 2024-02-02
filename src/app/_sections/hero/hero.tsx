@@ -1,5 +1,6 @@
 import SocialLinks from "@/components/social-links";
 import Image from "next/image";
+import Stats from "./components/stats/stats";
 
 export default function Hero() {
     return <section className="w-full md:h-screen h-screen flex items-center">
@@ -12,8 +13,9 @@ export default function Hero() {
                     <br />
                     based in <span className="font-bold">Egypt</span>.
                 </h1>
-                <p className="w-[80%] lg:mx-0 lg:text-start  mx-auto text-center text-gray-500 mb-10 dark:text-slate-400">Hi, my name is TheGreatagen, I&apos;m a frontend developer, I build web applications, I love to learn new technologies, I wanna be a Full Stack web developer, I have been as a front-end for 2 years, worked in 2 companies, and I love to share my knowledge.</p>
-                <div className="lg:w-fit w-full flex justify-center">
+                <p className="w-[80%] lg:mx-0 lg:text-start  mx-auto text-center text-gray-500  dark:text-slate-400">Hi, my name is TheGreatagen, I&apos;m a frontend developer, I build web applications, I love to learn new technologies, I wanna be a Full Stack web developer, I have been as a front-end for 2 years, worked in 2 companies, and I love to share my knowledge.</p>
+                <Stats />
+                <div className="lg:w-fit w-full flex justify-center mt-6">
                     <SocialLinks />
                 </div>
             </div>

@@ -14,14 +14,22 @@ const useProjects = create<UseProjectsInterface>((set) => ({
     isLoading: true
 }))
 
-
-interface UseSkillsInterface {
-    skills: Skill[]
-    setSkills: (skills: Skill[]) => void
+interface UseStatsInterface {
+    github: number | null
+    codewars: number | null
     isLoading: boolean
+    setStats: (stats: { github: number, codewars: number }) => void
 }
+
+const useStats = create<UseStatsInterface>((set) => ({
+    github: null,
+    codewars: null,
+    isLoading: true,
+    setStats: (stats) => set(() => ({ ...stats, isLoading: false })),
+}))
 
 
 export {
     useProjects,
+    useStats,
 }
