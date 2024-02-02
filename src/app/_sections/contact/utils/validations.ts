@@ -25,7 +25,16 @@ export function validateEmail(value: string) {
 export function validateSubject(value: string) {
     const errors = []
     if (value.trim().length === 0) {
-        errors.push({ success: false, message: "Please enter a name" })
+        errors.push({ success: false, message: "Please enter a subject" })
+    }
+    return errors
+}
+
+
+export function validateBody(value: string) {
+    const errors = []
+    if (value.trim().length === 0) {
+        errors.push({ success: false, message: "Please enter a body" })
     }
     return errors
 }
