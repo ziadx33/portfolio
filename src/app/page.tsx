@@ -18,8 +18,8 @@ export default function Page() {
             setProjects(projects)
         })()
     }, [setProjects])
-    // <LoadingPage loadings={[{ name: "projects", status: isProjectsLoading }]} />
     return <>
+        <LoadingPage loadings={[{ name: "projects", status: isProjectsLoading }]} />
         <Header />
         <Hero />
         <About />
