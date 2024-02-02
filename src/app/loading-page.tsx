@@ -3,17 +3,13 @@ import { Vim } from "@/components/logo";
 import { Progress } from "@/components/ui/progress";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap"
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 
 type LoadingPageInterface = { loadings: { name: string; status: boolean }[] };
 
 export default function LoadingPage({ loadings }: LoadingPageInterface) {
     const totalTasks = loadings.length;
     const loadingContainer = useRef<HTMLDivElement>(null)
-    const [documentBehaviour, setDocumentBehaviour] = useState("hidden")
-    useEffect(() => {
-        document.body.style.overflow = documentBehaviour 
-    }, [documentBehaviour])
 
     const overallProgress =
         totalTasks > 0
@@ -39,7 +35,6 @@ export default function LoadingPage({ loadings }: LoadingPageInterface) {
                     duration: swipeDuration,
                     ease: "power2.inOut",
                     onComplete() {
-                        setDocumentBehaviour("auto")
                         loadingContainer.current?.remove()
                     }
                 })
