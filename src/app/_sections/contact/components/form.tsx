@@ -15,12 +15,16 @@ export default function Form() {
     const [email, setEmail] = useState("")
     const [subject, setSubject] = useState("")
     const [body, setBody] = useState("")
-    const nameErrors = validateName(name) 
+    const nameErrors = validateName(name)
     const emailErrors = validateEmail(email)
     const subjectErrors = validateSubject(subject)
     const bodyErrors = validateBody(body)
     async function contactFormSubmit(e: FormEvent) {
         e.preventDefault()
+        if (nameErrors.some(e => !e.success) || emailErrors.some(e => !e.success) || subjectErrors.some(e => !e.success) || bodyErrors.some(e => !e.success)) {
+            setIsError(true)
+            return
+        }
         setIsSending(true)
         setIsError(false)
         const formData = new FormData(e.target as HTMLFormElement)

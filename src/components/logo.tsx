@@ -1,10 +1,11 @@
+"use client"
 import { useTheme } from "next-themes"
 
 export default function Logo() {
-    return <a href="#hero" className="logo flex items-center font-bold gap-[0.250rem]">
+    return <button className="logo flex items-center font-bold gap-[0.250rem]">
         <Vim />
         TheGreatagen
-    </a>
+    </button>
 }
 
 ["stroke-white", "stroke-[#020617]"]

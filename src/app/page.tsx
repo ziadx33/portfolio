@@ -14,6 +14,7 @@ import axios from "axios";
 export default function Page() {
     const { isLoading: isProjectsLoading, setProjects } = useProjects(store => store)
     const { isLoading: isStatsLoading, setStats } = useStats(store => store)
+
     useEffect(() => {
         (async () => {
             const projects = await getProjects()
@@ -22,10 +23,11 @@ export default function Page() {
                 axios.get("https://api.github.com/users/thegreatagen1"),
                 axios.get("https://www.codewars.com/api/v1/users/thegreatagen"),
             ]
-            const [{data: github}, {data: codewars}] = await Promise.all(promises)
+            const [{ data: github }, { data: codewars }] = await Promise.all(promises)
             setStats({ github: github.public_repos, codewars: codewars.codeChallenges.totalCompleted })
         })()
     }, [setProjects, setStats])
+
     return <>
         <LoadingPage loadings={[{ name: "projects", status: isProjectsLoading }, { name: "stats", status: isStatsLoading }]} />
         <Header />

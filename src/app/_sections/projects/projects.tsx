@@ -4,6 +4,7 @@ import SearchForm from "./components/search-form";
 import { technologies } from "@/constants";
 import { technology } from "@/utils/types";
 import ProjectsList from "./components/projects-list/projects-list";
+import Caption from "@/components/ui/caption";
 
 export interface Sorts {
     sortBy: "older" | "newer" | null
@@ -19,7 +20,7 @@ export default function Projects() {
     const [searchInputValue, setSearchInputValue] = useState("")
     const [sorts, setSorts] = useState<Sorts>({ sortBy: "newer", viewAs: "gallery" })
     return <section className="w-full min-h-[95vh] pb-4" id="projects">
-        <h1 className="text-6xl font-bold w-fit mx-auto mt-24 mb-14">Projects</h1>
+        <Caption className="mx-auto mt-24 mb-14">Projects</Caption>
         <div className="flex flex-col gap-6 w-[90%] mx-auto">
             <SearchForm technologiesList={technologiesList} setSorts={setSorts} setTechnologiesList={setTechnologiesList} searchInputValue={searchInputValue} setSearchInputValue={setSearchInputValue} />
             <ProjectsList sorts={sorts} settechnologiesList={setTechnologiesList} technologiesList={technologiesList} searchInputValue={searchInputValue} />
