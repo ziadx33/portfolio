@@ -2,11 +2,9 @@ import { Vim } from "@/components/logo";
 import AboutImage from "./about-image";
 import Image from "next/image";
 import Caption from "@/components/ui/caption";
-import React, { ReactNode } from "react";
 
-export default function About({ children }: { children: ReactNode }) {
+export default function About() {
     return <section className="w-full min-h-screen flex px-6 md:px-12 xl:py-14 py-8" id="about">
-        {children}
         <div className="flex-1 hidden xl:flex justify-center relative">
             <div className="img-container w-fit h-fit relative">
                 <Image alt="vim" src="/vim.svg" className="absolute left-10 top-56" width={70} height={70} draggable="false" />
