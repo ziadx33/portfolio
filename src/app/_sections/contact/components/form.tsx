@@ -27,11 +27,6 @@ export default function Form() {
         }
         setIsSending(true)
         setIsError(false)
-        const formData = new FormData(e.target as HTMLFormElement)
-        const name = formData.get("name") as string
-        const email = formData.get("email") as string
-        const body = formData.get("body") as string
-        const subject = formData.get("subject") as string
         const res = await axios.post("https://formspree.io/f/mgegorre", { name, email, subject, body })
         setSuccess(res.status === 200)
         setIsSending(false)

@@ -43,14 +43,6 @@ export function Header() {
 					<li onClick={toggleList}>
 						<a
 							className="transition hover:dark:text-slate-200 hover:text-gray-600 dark:hover:text-slate-100 md:w-fit w-full md:h-fit h-24"
-							href="#skills"
-						>
-							Skills
-						</a>
-					</li>
-					<li onClick={toggleList}>
-						<a
-							className="transition hover:dark:text-slate-200 hover:text-gray-600 dark:hover:text-slate-100 md:w-fit w-full md:h-fit h-24"
 							href="#projects"
 						>
 							Projects
