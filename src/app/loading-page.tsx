@@ -21,6 +21,7 @@ export default function LoadingPage({ loadings }: LoadingPageInterface) {
     useEffect(() => {
         const runAnimations = async () => {
             if (loadingContainer.current) {
+                scrollTo({ top: 0, behavior: "smooth" });
                 gsap.to("body :is(section, header)", {
                     y: loadingContainer.current?.clientHeight - 650,
                 });
