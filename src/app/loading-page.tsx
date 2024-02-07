@@ -1,28 +1,27 @@
+"use client"
 import { useEffect, useRef } from "react";
 import { Vim } from "@/components/logo";
-import { Progress } from "@/components/ui/progress";
 import { gsap } from "gsap";
 
 type LoadingPageInterface = {
-    loadings: { name: string; status: boolean }[];
+    loadings?: { name: string; status: boolean }[];
+    section: string
 };
 
-export default function LoadingPage({ loadings }: LoadingPageInterface) {
-    const totalTasks = loadings.length;
+export default function LoadingPage({ loadings, section }: LoadingPageInterface) {
+    const totalTasks = loadings?.length ?? 0;
     const loadingContainer = useRef<HTMLDivElement>(null);
-
     const overallProgress =
         totalTasks > 0
-            ? (loadings.filter((loading) => loading.status).length / totalTasks) * 100
+            ? ((loadings?.filter((loading) => loading.status) ?? []).length / totalTasks) * 100
             : 0;
-
-    const rest = 100 - overallProgress;
+    let rest = 100 - overallProgress;
 
     useEffect(() => {
         const runAnimations = async () => {
             if (loadingContainer.current) {
                 scrollTo({ top: 0, behavior: "smooth" });
-                gsap.to("body :is(section, header)", {
+                gsap.to(`body :is(#${section}, header)`, {
                     y: loadingContainer.current?.clientHeight - 650,
                 });
 
@@ -36,9 +35,6 @@ export default function LoadingPage({ loadings }: LoadingPageInterface) {
                         y: -window.innerHeight,
                         duration: swipeDuration,
                         ease: "power2.inOut",
-                        onComplete() {
-                            loadingContainer.current?.remove();
-                        },
                     });
 
                     gsap.to("body :is(section, header)", {
@@ -51,17 +47,16 @@ export default function LoadingPage({ loadings }: LoadingPageInterface) {
         };
 
         runAnimations();
-    }, [rest]);
+
+    }, [rest, section]);
 
     return (
         <div
             ref={loadingContainer}
-            className="loading-container border-2 w-full h-full fixed bg-white z-50 dark:bg-slate-950 flex flex-col items-center justify-center px-8 md:px-12 lg:px-24 3xl:px-[30rem]"
+            className="loading-container top-0 border-2 w-full h-screen fixed bg-white z-50 dark:bg-slate-950 flex flex-col items-center justify-center px-8 md:px-12 lg:px-24 3xl:px-[30rem]"
         >
             <h1 className="md:text-6xl text-3xl font-bold w-fit mx-auto md:mb-12 mb-6 transition md:text-start text-center">welcome to TheGreatagen <Vim width={90} height={90} /></h1>
-            <h2 className="md:text-5xl text-2xl font-semibold md:mb-10 mb-6 transition">Loading...</h2>
-            <Progress className="w-full md:h-4 h-3 mb-4 transition" value={rest} />
-            <p className="transition">Overall Progress: {rest}%</p>
+            <h3 className="loading-text md:text-3xl text-3xl font-semibold font-bold w-fit mx-auto">{section}</h3>
         </div>
     );
 }

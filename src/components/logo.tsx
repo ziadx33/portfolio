@@ -2,10 +2,10 @@
 import { useTheme } from "next-themes"
 
 export default function Logo() {
-    return <button className="logo flex items-center font-bold gap-[0.250rem]">
+    return <div className="logo flex items-center font-bold gap-[0.250rem]">
         <Vim />
         TheGreatagen
-    </button>
+    </div>
 }
 
 ["stroke-white", "stroke-[#020617]"]

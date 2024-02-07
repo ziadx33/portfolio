@@ -1,9 +1,9 @@
 "use client"
-import { useMemo, Dispatch, SetStateAction, useEffect } from "react"
+import { useMemo, Dispatch, SetStateAction } from "react"
 import Project from "./components/project"
 import SkeletonProjects from "./components/skeleton-projects"
-import { Sorts, TechnologiesList } from "../../projects"
 import { useProjects } from "@/store"
+import { Sorts, TechnologiesList } from "../../page"
 
 interface ProjectsListProps {
     technologiesList: TechnologiesList

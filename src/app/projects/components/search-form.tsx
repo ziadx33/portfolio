@@ -4,8 +4,8 @@ import { DropdownMenuContent, DropdownMenuSeparator, DropdownMenuTrigger, Dropdo
 import { Input } from "@/components/ui/input";
 import { X } from "lucide-react";
 import { Dispatch, SetStateAction, memo, useRef } from "react";
-import { Sorts, TechnologiesList } from "../projects";
 import Image from "next/image";
+import { Sorts, TechnologiesList } from "../page";
 
 interface SearchFormProps {
     technologiesList: TechnologiesList

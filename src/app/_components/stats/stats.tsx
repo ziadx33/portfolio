@@ -1,3 +1,4 @@
+"use client"
 import { Code } from "lucide-react";
 import Stat from "./components/stat";
 import { useStats } from "@/store";

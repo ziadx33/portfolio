@@ -1,5 +1,5 @@
 import { create } from "zustand"
-import { Project, Skill } from "./utils/types"
+import { Project } from "./utils/types"
 
 
 interface UseProjectsInterface {
@@ -27,7 +27,6 @@ const useStats = create<UseStatsInterface>((set) => ({
     isLoading: true,
     setStats: (stats) => set(() => ({ ...stats, isLoading: false })),
 }))
-
 
 export {
     useProjects,

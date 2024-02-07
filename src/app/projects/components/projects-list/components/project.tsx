@@ -1,9 +1,9 @@
+import { Sorts, TechnologiesList } from "@/app/projects/page";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Project } from "@/utils/types";
 import { Check, Code, Eye } from "lucide-react";
 import { Dispatch, SetStateAction } from "react";
-import { Sorts, TechnologiesList } from "../../../projects";
 
 export default function Project({ image, name, description, technologies, url, code, setTechnologiesList, completedInDays, viewAs }: Project & { setTechnologiesList: Dispatch<SetStateAction<TechnologiesList>>, completedInDays: number, viewAs: Sorts["viewAs"] }) {
     const isList = viewAs === "list";
