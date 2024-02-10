@@ -33,12 +33,12 @@ function SearchFormComponent({ technologiesList, setTechnologiesList, searchInpu
                     <DropdownMenuItem onClick={() => setSorts(c => ({ sortBy: "older", viewAs: c.viewAs }))}>
                         older
                     </DropdownMenuItem>
-                    <DropdownMenuLabel>View as</DropdownMenuLabel>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuItem onClick={() => setSorts(c => ({ sortBy: c.sortBy, viewAs: "list" }))}>
+                    <DropdownMenuLabel className="lg:block hidden">View as</DropdownMenuLabel>
+                    <DropdownMenuSeparator className="lg:block hidden"/>
+                    <DropdownMenuItem className="lg:block hidden"onClick={() => setSorts(c => ({ sortBy: c.sortBy, viewAs: "list" }))}>
                         list
                     </DropdownMenuItem>
-                    <DropdownMenuItem onClick={() => setSorts(c => ({ sortBy: c.sortBy, viewAs: "gallery" }))}>
+                    <DropdownMenuItem className="lg:block hidden" onClick={() => setSorts(c => ({ sortBy: c.sortBy, viewAs: "gallery" }))}>
                         gallery
                     </DropdownMenuItem>
                 </DropdownMenuContent>

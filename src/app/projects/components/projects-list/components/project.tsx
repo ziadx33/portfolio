@@ -24,7 +24,7 @@ export default function Project({ image, name, description, technologies, url, c
         </div>
     </>
     return <Card className={`${isList ? "w-full flex pb-0" : "w-96 "} h-fit overflow-hidden shadow-xl relative`}>
-        <Image width={isList ? 2000 : 1920} height={1080} src={image} alt={name} draggable='false' className="object-cover" />
+        <Image width={1920} height={1080} src={image} alt={name} draggable='false' className={isList ? "w-96 border-r" : "w-full h-44"} />
         <div className={`pt-2 px-4 ${isList ? "flex flex-col justify-between" : ""}`}>
             {isList ? <div>{heading}</div> : heading}
             <div className="flex gap-1 mt-auto pb-3">

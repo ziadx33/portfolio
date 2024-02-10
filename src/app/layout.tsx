@@ -7,6 +7,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Header } from "./_components/header";
 import { Footer } from "./_components/footer";
 import Contact from "./_contact/contact";
+import Menu from "./_components/menu";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,6 +37,7 @@ export default function RootLayout({
                             <Contact />
                         </div>
                         <Footer />
+                        <Menu />
                     </>
                 </ThemeProvider>
                 <SpeedInsights />
