@@ -27,12 +27,12 @@ export default function LoadingPage({ loadings, section }: LoadingPageInterface)
 
                 if (rest === 100) {
                     await new Promise((resolve) => setTimeout(resolve, 600));
-                    const swipeDuration = 0.8;
+                    const swipeDuration = 1;
 
                     gsap.to(".loading-container", {
                         borderBottomLeftRadius: loadingContainer.current.clientWidth / 2,
                         borderBottomRightRadius: loadingContainer.current.clientHeight / 2,
-                        y: -window.innerHeight,
+                        y: (-window.innerHeight) - loadingContainer.current.clientHeight,
                         duration: swipeDuration,
                         ease: "power2.inOut",
                     });
@@ -56,7 +56,7 @@ export default function LoadingPage({ loadings, section }: LoadingPageInterface)
             className="loading-container top-0 border-2 w-full h-screen fixed bg-white z-50 dark:bg-slate-950 flex flex-col items-center justify-center px-8 md:px-12 lg:px-24 3xl:px-[30rem]"
         >
             <h1 className="md:text-6xl text-3xl font-bold w-fit mx-auto md:mb-12 mb-6 transition md:text-start text-center">welcome to TheGreatagen <Vim width={90} height={90} /></h1>
-            <h3 className="loading-text md:text-3xl text-3xl font-semibold font-bold w-fit mx-auto">{section}</h3>
+            <h3 className="loading-text md:text-3xl text-3xl font-semibold w-fit mx-auto">{section}</h3>
         </div>
     );
 }

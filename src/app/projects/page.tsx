@@ -8,6 +8,9 @@ import Caption from "@/components/ui/caption";
 import LoadingPage from "../loading-page";
 import { useProjects } from "@/store";
 import getProjects from "@/utils/getProjects";
+import { Button } from "@/components/ui/button";
+import { Github } from "lucide-react";
+import Link from "next/link";
 
 export interface Sorts {
     sortBy: "older" | "newer" | null
@@ -36,6 +39,7 @@ export default function Projects() {
             <div className="flex flex-col gap-6 w-[90%] mx-auto">
                 <SearchForm technologiesList={technologiesList} setSorts={setSorts} setTechnologiesList={setTechnologiesList} searchInputValue={searchInputValue} setSearchInputValue={setSearchInputValue} />
                 <ProjectsList sorts={sorts} settechnologiesList={setTechnologiesList} technologiesList={technologiesList} searchInputValue={searchInputValue} />
+                <Button asChild><a target="_blank" href="https://github.com/thegreatagen1" className="flex gap-1.5 items-center">see all projects on github <Github size={20} /></a></Button>
             </div>
         </section>
     </div>

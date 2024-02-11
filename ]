@@ -1,9 +1,0 @@
-import { Code, Github, Twitter } from "lucide-react";
-import Stat from "./components/stat";
-
-export default function Stats() {
-    return <div className="mt-5 flex gap-2.5 justify-center">
-        <Stat name="github" value={10} img={<Github size={40} />} />
-        <Stat name="codewars" value={10} img={<Code size={40} />} />
-    </div>
-}
