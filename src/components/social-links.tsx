@@ -6,7 +6,7 @@ export default function SocialLinks() {
 	return (
 		<div className="social-links w-fit flex gap-1">
 			<Button className="w-10 p-0" title="github" asChild>
-				<a target="_blank" href="https://github.com/X31">
+				<a target="_blank" href="https://github.com/ziadx33">
 					<Github className="w-6" />
 				</a>
 			</Button>
@@ -19,7 +19,7 @@ export default function SocialLinks() {
 				</a>
 			</Button>
 			<Button className="w-10 p-0" title="twitter" asChild>
-				<a target="_blank" href="https://twitter.com/X3">
+				<a target="_blank" href="https://twitter.com/ziadx333">
 					<Twitter className="w-6" />
 				</a>
 			</Button>
