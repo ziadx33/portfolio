@@ -64,7 +64,7 @@ export default function Projects() {
 					<Button asChild>
 						<a
 							target="_blank"
-							href="https://github.com/X31"
+							href="https://github.com/ziadx33"
 							className="flex gap-1.5 items-center"
 						>
 							see all projects on github{" "}
