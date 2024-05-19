@@ -12,7 +12,9 @@ export const goPage = async (page: string, fn?: () => void) => {
 		const loadingText = loadingContainer?.querySelector(
 			".loading-text",
 		) as HTMLHeadingElement;
-		loadingText.innerHTML = page === "" ? "hero" : page;
+		loadingText.innerHTML = `${
+			page === "" ? "hero" : page
+		} page is loading...`;
 		const progressBar = document
 			.querySelector("#loading-progress")
 			?.querySelector("div");
