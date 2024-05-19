@@ -2,8 +2,9 @@
 import { Sorts, TechnologiesList } from "@/app/projects/page";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 import { Project as ProjectType } from "@/utils/types";
-import { Check, Code, Eye } from "lucide-react";
+import { Check, Code, Eye, Loader2, LoaderIcon } from "lucide-react";
 import Image from "next/image";
 import { Dispatch, SetStateAction } from "react";
 
@@ -16,6 +17,7 @@ export default function Project({
 	code,
 	setTechnologiesList,
 	completedInDays,
+	status,
 	viewAs,
 }: ProjectType & {
 	setTechnologiesList: Dispatch<SetStateAction<TechnologiesList>>;
@@ -30,9 +32,18 @@ export default function Project({
 					{name}{" "}
 				</h2>
 				<span className="text-sm flex gap-1 text-gray-500 h-fit my-auto">
-					<Check size={16} className="mt-0.5" />{" "}
-					{completedInDays} in{" "}
-					{completedInDays === 1 ? "day" : "days"}
+					{status === "done" ? (
+						<>
+							<Check size={16} className="mt-0.5" />{" "}
+							{completedInDays} in{" "}
+							{completedInDays === 1 ? "day" : "days"}
+						</>
+					) : (
+						<>
+							<LoaderIcon size={16} className="mt-0.5" />{" "}
+							pending
+						</>
+					)}
 				</span>
 			</div>
 			<p className="text-gray-600 text-sm mb-2 dark:text-gray-500">
@@ -98,6 +109,7 @@ export default function Project({
 				}`}
 			>
 				{isList ? <div>{heading}</div> : heading}
+
 				<div className="flex gap-1 mt-auto pb-3">
 					<Button className="flex-1" asChild>
 						<a href={url} target="_blank">
