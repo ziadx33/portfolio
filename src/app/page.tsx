@@ -66,15 +66,14 @@ export default function Hero() {
 							<SocialLinks />
 						</div>
 					</div>
-					<div className="img-container w-1/2 h-[50%] justify-center items-start lg:flex hidden">
-						<Image
-							draggable="false"
-							width={500}
-							height={500}
-							src="/vim.svg"
-							alt="vim"
-						/>
-					</div>
+					<Image
+						draggable="false"
+						width={500}
+						height={500}
+						src="/profile.jpg"
+						alt="profile pic"
+						className="rounded-[50%] lg:inline h-[500px] hidden object-cover"
+					/>
 				</div>
 			</section>
 		</div>

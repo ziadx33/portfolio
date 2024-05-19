@@ -54,14 +54,6 @@ export function Header() {
 				<ul className="items-center gap-4 font-semibold md:flex hidden transition">
 					<li>
 						<button
-							className="transition hover:dark:text-slate-200 hover:text-gray-600 dark:hover:text-slate-100 md:w-fit w-full md:h-fit h-24"
-							onClick={() => goRoute("about")}
-						>
-							About me
-						</button>
-					</li>
-					<li>
-						<button
 							onClick={() => goRoute("projects")}
 							className="transition hover:dark:text-slate-200 hover:text-gray-600 dark:hover:text-slate-100 md:w-fit w-full md:h-fit h-24"
 						>

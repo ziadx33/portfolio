@@ -1,7 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 import { Sorts, TechnologiesList } from "@/app/projects/page";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Project } from "@/utils/types";
+import { Project as ProjectType } from "@/utils/types";
 import { Check, Code, Eye } from "lucide-react";
 import Image from "next/image";
 import { Dispatch, SetStateAction } from "react";
@@ -16,7 +17,7 @@ export default function Project({
 	setTechnologiesList,
 	completedInDays,
 	viewAs,
-}: Project & {
+}: ProjectType & {
 	setTechnologiesList: Dispatch<SetStateAction<TechnologiesList>>;
 	completedInDays: number;
 	viewAs: Sorts["viewAs"];
