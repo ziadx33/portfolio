@@ -101,7 +101,10 @@ export default function Project({
 				src={image}
 				alt={name}
 				draggable="false"
-				className={isList ? "w-96 border-r" : "w-full h-44"}
+				className={cn(
+					"object-cover",
+					isList ? "w-96 border-r" : "w-full h-44",
+				)}
 			/>
 			<div
 				className={`pt-2 px-4 ${
