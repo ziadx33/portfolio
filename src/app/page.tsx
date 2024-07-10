@@ -12,18 +12,11 @@ export default function Hero() {
 	useEffect(() => {
 		(async () => {
 			if (isStatsLoading === false) return;
-			const promises = [
-				axios.get("https://api.github.com/users/ziadx33"),
-				axios.get(
-					"https://www.codewars.com/api/v1/users/thegreatagen",
-				),
-			];
-			const [{ data: github }, { data: codewars }] = await Promise.all(
-				promises,
+			const github = await axios.get<{ public_repos: number }>(
+				"https://api.github.com/users/ziadx33",
 			);
 			setStats({
-				github: github.public_repos,
-				codewars: codewars.codeChallenges.totalCompleted,
+				github: github.data.public_repos,
 			});
 		})();
 	}, [setStats, isStatsLoading]);
@@ -68,11 +61,11 @@ export default function Hero() {
 					</div>
 					<Image
 						draggable="false"
-						width={500}
-						height={500}
-						src="/profile.jpg"
+						width={900}
+						height={900}
+						src="/profile.png"
 						alt="profile pic"
-						className="rounded-[50%] lg:inline h-[500px] hidden object-cover"
+						className="lg:inline h-[500px] hidden object-cover"
 					/>
 				</div>
 			</section>
