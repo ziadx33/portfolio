@@ -38,7 +38,8 @@ export default function Projects() {
 		(async () => {
 			getProjects().then(setProjects);
 		})();
-	}, [setProjects, isProjectsLoading]);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [isProjectsLoading]);
 	return (
 		<div>
 			<LoadingPage

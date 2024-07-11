@@ -70,7 +70,7 @@ export default function Project(data: ProjectProps) {
 	return (
 		<Card
 			className={`${
-				isList ? "w-full flex pb-0" : "w-96 "
+				isList ? "w-full flex pb-0" : "w-[22.5rem] "
 			} h-fit overflow-hidden shadow-xl relative`}
 		>
 			<Image
