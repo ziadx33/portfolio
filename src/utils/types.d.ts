@@ -8,7 +8,7 @@ interface Project {
 	completed_at: string;
 	name: string;
 	description: string;
-	image: string;
+	images: string[];
 	technologies: technology[];
 	code: string;
 	url: string;
