@@ -61,22 +61,26 @@ function Slider({
 				);
 			})}
 
-			<Button
-				variant="outline"
-				size="icon"
-				className="rounded-full absolute right-3 top-1/2 -translate-y-1/2"
-				onClick={slideNext}
-			>
-				<ArrowRight />
-			</Button>
-			<Button
-				variant="outline"
-				size="icon"
-				className="rounded-full absolute left-3 top-1/2 -translate-y-1/2"
-				onClick={slidePrev}
-			>
-				<ArrowLeft />
-			</Button>
+			{images.length > 1 && (
+				<>
+					<Button
+						variant="outline"
+						size="icon"
+						className="rounded-full absolute right-3 top-1/2 -translate-y-1/2"
+						onClick={slideNext}
+					>
+						<ArrowRight />
+					</Button>
+					<Button
+						variant="outline"
+						size="icon"
+						className="rounded-full absolute left-3 top-1/2 -translate-y-1/2"
+						onClick={slidePrev}
+					>
+						<ArrowLeft />
+					</Button>
+				</>
+			)}
 		</div>
 	);
 }

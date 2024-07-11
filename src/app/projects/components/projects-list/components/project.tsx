@@ -144,7 +144,7 @@ function ProjectDialogContent({
 			<div className="flex-1 h-fit mt-6 flex flex-col gap-2">
 				<Slider
 					className="w-full h-80 border outline-muted rounded-lg"
-					images={[...data.images, ...data.images]}
+					images={data.images}
 				/>
 				<div className="flex gap-2">
 					<h2 className="project-title font-semibold text-3xl w-fit">
