@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { technology } from "@/utils/types";
 import { Dispatch, SetStateAction } from "react";
 import { TechnologiesList } from "../projects/page";
+import Image from "next/image";
 
 type TechnologiesProps = {
 	technologies: technology[];
@@ -31,7 +32,9 @@ export function Technologies({
 				title={technology}
 			>
 				{/* eslint-disable-next-line @next/next/no-img-element */}
-				<img
+				<Image
+					width={20}
+					height={10}
 					draggable="false"
 					alt={technology}
 					className="h-full w-fit mr-2"
