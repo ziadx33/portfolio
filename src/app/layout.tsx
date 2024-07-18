@@ -14,7 +14,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
 	title: "Ziad Hatem",
 	description:
-		"Front-end developer, made over 45 project, worked in 2 companies, 2 years of experience, learning networking, I use Neo:vim~1: & tmux for coding, available to hire",
+		"Front-end developer, made over 45 project, worked in 2 companies, 2 years of experience, available for web dev projects",
 };
 
 export default function RootLayout({
