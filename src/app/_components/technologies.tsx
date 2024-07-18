@@ -32,12 +32,10 @@ export function Technologies({
 				title={technology}
 			>
 				{/* eslint-disable-next-line @next/next/no-img-element */}
-				<Image
-					width={20}
-					height={10}
+				<img
 					draggable="false"
 					alt={technology}
-					className="h-full w-fit mr-2"
+					className="h-full w-full max-w-5 mr-2"
 					src={`/logos/${technology
 						.split(" ")
 						.join("-")
