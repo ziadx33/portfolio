@@ -28,7 +28,7 @@ export default function Hero() {
 			/>
 			<section
 				id="hero"
-				className="w-full md:h-screen h-screen flex items-center"
+				className="w-full min-h-screen h-fit flex items-center"
 			>
 				<div className="container h-full mx-auto flex items-start gap-12 pt-32 md:pt-34">
 					<div className="text flex items-start flex-col lg:w-2/3 w-full">
